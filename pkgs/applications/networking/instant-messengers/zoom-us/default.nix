@@ -1,6 +1,7 @@
 { stdenv
 , lib
 , fetchurl
+, pipewire
 , makeWrapper
 , xar
 , cpio
@@ -46,7 +47,7 @@ let
   version = {
     aarch64-darwin = "5.10.4.6592";
     x86_64-darwin = "5.10.4.6592";
-    x86_64-linux = "5.10.6.3192";
+    x86_64-linux = "5.11.1.3595";
    }.${system} or throwSystem;
 
   srcs = {
@@ -76,6 +77,7 @@ let
     expat
     libdrm
     libGL
+    pipewire
     fontconfig
     freetype
     gtk3
